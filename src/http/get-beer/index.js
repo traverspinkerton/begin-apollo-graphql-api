@@ -28,7 +28,7 @@ let html = `
 
 const beers = [
   { name: 'Pilz', brewery: 'Live Oak', type: 'pilsner' },
-  { name: 'Two Hearted Ale', brewery: 'Bells Brewery', type 'IPA' }
+  { name: 'Two Hearted Ale', brewery: 'Bells Brewery', type: 'IPA' }
 ]
 
 // HTTP function
