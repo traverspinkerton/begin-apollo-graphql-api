@@ -5,6 +5,7 @@ cookie-j7s
 
 @http
 post /graphql
+get /beer
 
 @tables
 data
