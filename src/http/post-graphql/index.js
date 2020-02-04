@@ -3,13 +3,15 @@ let {ApolloServer, gql} = require('apollo-server-lambda')
 
 let typeDefs = gql`
   type Query {
-    hello: String
+    hello: String,
+    beer: String,
   }
 `
 
 let resolvers = {
   Query: {
     hello: () => 'Hello world!',
+    beer: () => 'Is good for me',
   },
 }
 
