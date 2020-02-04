@@ -34,7 +34,7 @@ const beers = [
 // HTTP function
 exports.handler = async function http(req) {
   console.log(req)
-  return { body: JSON.stringify(beers);
+  return { body: JSON.stringify(beers)
 //   return {
 //     headers: {
 //       'content-type': 'text/html; charset=utf8',
