@@ -26,14 +26,20 @@ let html = `
 </html>
 `
 
+const beers = [
+  { name: 'Pilz', brewery: 'Live Oak', type: 'pilsner' },
+  { name: 'Two Hearted Ale', brewery: 'Bells Brewery', type 'IPA' }
+]
+
 // HTTP function
 exports.handler = async function http(req) {
   console.log(req)
-  return {
-    headers: {
-      'content-type': 'text/html; charset=utf8',
-      'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0'
-    },
-    body: html
-  }
+  return { body: JSON.stringify(beers);
+//   return {
+//     headers: {
+//       'content-type': 'text/html; charset=utf8',
+//       'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0'
+//     },
+//     body: html
+//   }
 }
