@@ -1,18 +1,28 @@
 let arc = require('@architect/functions')
 let {ApolloServer, gql} = require('apollo-server-lambda')
+let data = require('@begin/data')
 
 let typeDefs = gql`
   type Query {
     hello: String,
-    beer: String,
+    beer: [String],
+  }
+  type Mutation {
+    addBeer(beer: String!): String!
   }
 `
 
 let resolvers = {
   Query: {
     hello: () => 'Hello world!',
-    beer: () => 'Is good for me',
+    beer: async () => await data.get({ table: 'beer '}),
   },
+  Mutation: {
+    addBeer: async (_, { beer }) => {
+      const newBeer = await data.set({ table: 'beer', key: 1, beer})
+      return beer
+    }
+  }
 }
 
 let server = new ApolloServer({typeDefs, resolvers})
