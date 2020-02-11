@@ -4,10 +4,10 @@
 // let begin = require('@architect/functions')
 let data = require('@begin/data')
 
-const beers = [
-  { name: 'Pilz', brewery: 'Live Oak', type: 'pilsner' },
-  { name: 'Two Hearted Ale', brewery: 'Bells Brewery', type: 'IPA' }
-]
+// const beers = [
+//   { name: 'Pilz', brewery: 'Live Oak', type: 'pilsner' },
+//   { name: 'Two Hearted Ale', brewery: 'Bells Brewery', type: 'IPA' }
+// ]
 
 // HTTP function
 exports.handler = async function http(req) {

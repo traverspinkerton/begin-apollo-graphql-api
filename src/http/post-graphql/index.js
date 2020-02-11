@@ -19,7 +19,7 @@ let resolvers = {
   },
   Mutation: {
     addBeer: async (_, { beer }) => {
-      const newBeer = await data.set({ table: 'beer', key: 1, beer})
+      await data.set({ table: 'beer', key: 1, beer})
       return beer
     }
   }
